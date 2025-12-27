@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Singup</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+
+
+	<div id="container">
+		<div id="contain">
+			<div id="signup" class="animate__animated animate__flipInY">
+				<h1>Singup</h1>
+				
+
+				<form id="signup_form">
+					<input type="text" id="username" required>
+					<input type="email" id="email" required>
+					<small id="notice_email"> Email id is already exists</small>
+					<input type="password" id="password" required>
+					<button id="submit_btn">Singup !..</button>
+
+				</form>
+				<p>if you are already <span id="login_span">Login</span></p>
+			</div>
+			<div id="login" class="animate__animated animate__flipInY">
+				
+				<h1>Login </h1>
+				
+
+				<form id="login_frm">
+					
+					<input type="email" id="login_email">
+					<input type="password" id="login_password">
+					<button id="login_btn">Login !..</button>
+
+				</form>
+				<p>if you are not registred <span id="singup_span">Singup</span></p>
+			</div>
+		</div>
+	</div>
+
+<script src="./js/signup_login.js"></script>
+<script src="./js/signup_auth.js"></script>
+</body>
+</html>
