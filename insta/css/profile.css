@@ -1,0 +1,67 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#container
+{
+	width:100%;
+	height: 100vh;
+	border:1px solid black;
+	background: #800080;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffc0cb, #800080);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffc0cb, #800080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+}
+
+#contain
+{
+	width:300px;
+	height:300px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px #ccc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#profile
+{
+	height: 125px;
+	width: 125px;
+	border: 5px solid black;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	box-shadow: 0px 0px 10px #ccc;
+	overflow: hidden;
+
+}
+
+#profile_pic
+{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border: 2px solid black;
+	box-shadow: 0px 0px 10px #ccc;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 10000;
+}
+
+#profile_icon
+{
+	position: absolute;
+	font-size: 100px;
+	margin-top: 30px;
+}
