@@ -6,9 +6,9 @@ submit_btn.onclick = function (e)
 
 {
 	e.preventDefault();
-	var username = document.getElementById("username").value;
-	var email = document.getElementById("email").value;
-	var password = document.getElementById("password").value;
+	var username = btoa(document.getElementById("username").value);
+	var email = btoa(document.getElementById("email").value);
+	var password = btoa(document.getElementById("password").value);
 
 		if(username != "" && email != "" && password != ""	)
 		{
@@ -76,8 +76,8 @@ var login_frm = document.getElementById("login_frm");
 login_frm.onsubmit = function(e)
 {
 	e.preventDefault();
-	var login_email = document.getElementById("login_email").value;
-	var login_password = document.getElementById("login_password").value;
+	var login_email = btoa(document.getElementById("login_email").value);
+	var login_password = btoa(document.getElementById("login_password").value);
 
 	if(localStorage.getItem(login_email) == null)
 	{
@@ -96,6 +96,8 @@ login_frm.onsubmit = function(e)
 			if(login_password == correct_password)
 			{
 				alert("login success");
+				window.location.replace("profile.html");
+				sessionStorage.setItem("users",login_email);
 			}
 			else
 		{
