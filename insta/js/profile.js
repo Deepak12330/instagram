@@ -39,9 +39,12 @@ window.onload = function()
 
 				document.getElementById("next_btn").onclick = function()
 				{
-					// var user_email = object_data.email;
-					// localStorage.setItem(user_email,url_image);
-					// console.log("oaky"); not working properly
+					var user_email = object_data.email;
+					
+					localStorage.setItem(user_email+"image",url_image);
+					document.getElementById("container").style.display = "none";
+
+					console.log("oaky");
 				}
 
 
