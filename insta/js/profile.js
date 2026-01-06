@@ -12,8 +12,17 @@ window.onload = function()
 		var text_data = localStorage.getItem(user_email);
 		var object_data = JSON.parse(text_data);
 		var username = atob(object_data.users);
+		var profile_image = localStorage.getItem(user_email+"image");
+		console.log(profile_image);
+		document.getElementById("profile_box").style.backgroundImage = "url("+profile_image+")";
+		document.getElementById("profile_box").style.backgroundSize = "cover";
+
+
+
 	
 		var profile_name = document.getElementById("profile_name");
+		var profile_user = document.getElementById("profile_user");
+		profile_user.innerHTML = username;
 		profile_name.innerHTML = username;
 
 		//--------------------------------------------------
@@ -43,6 +52,9 @@ window.onload = function()
 					
 					localStorage.setItem(user_email+"image",url_image);
 					document.getElementById("container").style.display = "none";
+					document.getElementById("container_dashboard").style.display ="block";
+
+
 
 					console.log("oaky");
 				}
@@ -52,11 +64,23 @@ window.onload = function()
 			}
 
 				reader.readAsDataURL(files);
+
+
 		}	
 
 
 
 
+			document.getElementById("logout").onclick = function()
+			{
+				sessionStorage.clear();
+				window.location.replace("index.html");
+			}
+
+			document.getElementById("contact").onclick = function()
+			{
+				window.location.href ="./contacts/contact.html";
+			}
 
 	}
 }
