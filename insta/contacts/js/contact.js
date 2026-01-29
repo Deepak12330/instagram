@@ -72,7 +72,7 @@ window.onload = function()
 				var edit_i = document.createElement("I");
 				edit_i.setAttribute("class","fas fa-edit");
 				var trash = document.createElement("I");
-				trash.setAttribute("class","fas fa-trash");
+				trash.setAttribute("class","fas fa-trash del");
 				tool.appendChild(edit_i);
 				tool.appendChild(trash);
 
@@ -119,6 +119,31 @@ window.onload = function()
 				}
 			}
 		}
+
+		var del = document.getElementsByClassName("del");
+		
+		
+			var i;
+			for(i=0;i<del.length;i++)
+			{
+				del[i].onclick = function()
+				{
+					var parent = this.parentElement.parentElement;
+					var p_ele = parent.getElementsByClassName("contact_name")[0];
+					 var username = p_ele.innerHTML.replace('<i class="fas fa-user"></i>', '');
+					var current_user =  sessionStorage.getItem("users");
+					// alert(current_user + "_contacts"+ username);
+					localStorage.removeItem(current_user + "_contacts" + username.trim());
+
+					  parent.className = "animate__animated animate__bounceOut";
+
+					   setTimeout(function () {
+			            parent.remove();
+			        }, 1000);
+
+				}
+			}
+		
 
 	
 }
