@@ -80,7 +80,7 @@ background: linear-gradient(to right, #ffc0cb, #800080); /* W3C, IE 10+/ Edge, F
 {
 		width:90%;
 	height:40px;
-	
+	display:none;
 	outline: none;
 	cursor: pointer;
 	padding-left:5px;
@@ -90,4 +90,158 @@ background: linear-gradient(to right, #ffc0cb, #800080); /* W3C, IE 10+/ Edge, F
 background: -webkit-linear-gradient(to right, #d04ed6, #834d9b);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #d04ed6, #834d9b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+
+body 
+{
+	background: #834d9b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #d04ed6, #834d9b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #d04ed6, #834d9b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+*
+{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+/* ================= MAIN DASHBOARD CONTAINER ================= */
+#container_dashboard
+{
+	width:100%;
+	height:100vh;
+	background: #DAE2F8;
+	background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);
+	background: linear-gradient(to right, #D6A4A4, #DAE2F8);
+	display: none;
+}
+
+/* ================= NAVBAR ================= */
+#navbar
+{
+	width:100%;
+	height:150px;
+	background-color: red;
+	background-image: url(https://cdn.pixabay.com/photo/2025/12/11/11/08/beautiful-10008353_1280.jpg);
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+}
+
+/* ================= PROFILE IMAGE ================= */
+#profile_box
+{
+	width:200px;
+	height:200px;
+
+	border:3px solid grey;
+	box-shadow: 0px 0px 10px #ccc;
+	margin-top: 50px;
+	border-radius: 100%;
+	
+	background-size: cover;
+}
+
+/* ================= CONTENT AREA ================= */
+#content
+{
+	width:100%;
+	height:400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* ================= BOXES ================= */
+#contact,
+#video,
+#logout
+{
+	width:250px;
+	height:250px;
+	margin-left:80px;
+	margin-top: 130px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	cursor: pointer;
+	background: #ED4264;
+	background: -webkit-linear-gradient(to right, #FFEDBC, #ED4264);
+	background: linear-gradient(to right, #FFEDBC, #ED4264);
+}
+
+/* ================= USERNAME ================= */
+#navbar h3
+{
+	position: absolute;
+	margin-top:250px;
+	color:white;
+	font-size: 25px;
+}
+
+/* ================= ICONS ================= */
+#content i
+{
+	font-size: 120px;
+	color:#ccc;
+}
+
+#content p
+{
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+/* ================= HOVER EFFECT ================= */
+#contact:hover
+{
+	width:260px;
+	height:260px;
+	box-shadow: 0px 0px 10px white;
+	transition: 0.5s;
+}
+
+
+
+
+#main_contact_box
+
+{
+	width:100%;
+	height:100vh;
+	border:1px solid black;
+	background-color: black;
+	position: absolute;
+	opacity: 0.8;
+	z-index: 100000;
+	top:0;
+
+}
+
+#cross span 
+{
+	font-size: 40px;
+	color:white;
+	margin-left:5px;
+	cursor: pointer;
+}
+
+#add_more_contact
+{
+	width:400px;
+	height: 300px;
+	background-color: red;
+}
+
+#contact_nav
+{
+	width:100%;
+	height:300px;
+	
+	display: flex;
+	justify-content: center;
 }
