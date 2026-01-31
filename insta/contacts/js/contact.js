@@ -70,7 +70,7 @@ window.onload = function()
 				var tool = document.createElement("DIV");
 				tool.setAttribute("id","tool");
 				var edit_i = document.createElement("I");
-				edit_i.setAttribute("class","fas fa-edit");
+				edit_i.setAttribute("class","fas fa-edit edit");
 				var trash = document.createElement("I");
 				trash.setAttribute("class","fas fa-trash del");
 				tool.appendChild(edit_i);
@@ -143,6 +143,64 @@ window.onload = function()
 
 				}
 			}
+
+
+
+			//update code 
+
+			var edit = document.getElementsByClassName("edit");
+
+for (var i = 0; i < edit.length; i++) {
+
+    edit[i].onclick = function () {
+
+        var par_ele = this.parentElement.parentElement;
+        var para = par_ele.getElementsByTagName("p");
+
+        // OLD DATA
+        var old_name = para[0].innerHTML
+            .replace('<i class="fas fa-user"></i>', '')
+            .trim();
+
+        var old_num = para[1].innerHTML
+            .replace('<i class="fas fa-mobile-alt"></i>', '')
+            .trim();
+
+        document.getElementById("contact_bg").style.display = "block";
+        document.getElementById("edit_contact").innerHTML = "Update Contact";
+        document.getElementById("c_name").value = old_name;
+        document.getElementById("c_number").value = old_num;
+
+        document.getElementById("add").innerHTML = "Update";
+        document.getElementById("close").style.display = "none";
+
+        document.getElementById("add").onclick = function () {
+
+            var update_name = document.getElementById("c_name").value;
+            var update_number = document.getElementById("c_number").value;
+
+            if (update_name !== "" && update_number !== "") {
+
+                var contact_email = sessionStorage.getItem("users");
+                localStorage.removeItem(contact_email + "_contacts" + old_name);
+                var object_data = {
+                    contact_name: update_name,
+                    contact_number: update_number
+                };
+
+                localStorage.setItem(
+                    contact_email + "_contacts" + update_name,
+                    JSON.stringify(object_data)
+                );
+
+
+                window.location.reload();
+            }
+        };
+    };
+}
+
+
 		
 
 	
