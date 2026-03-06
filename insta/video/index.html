@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>video player</title>
+	<link rel="stylesheet" type="text/css" href="css/video.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+
+	<div id="container">
+
+	<div id="left">
+
+		
+		<div id="main_video">
+			<video id="video_box">
+				<source src="videoo.mp4" type="">
+			</video>
+			<div id="video_controls">
+				<div id="range">
+				<input type="range"  id="range_input" min="0" max="" value="0">
+			</div>
+			<div id="setting_panel">
+				<div id="time">
+					<p id="v_timing">00:00 / 00:00</p>
+				</div>
+				<div id="button">
+					<i class="fa fa-backward" aria-hidden="true" id="backward"></i>
+					<i class="fa fa-play-circle" aria-hidden="true" id="play_btn"></i>
+					<!-- <i class="fa fa-pause-circle" aria-hidden="true" id="pause"></i> -->
+					<i class="fa fa-forward" aria-hidden="true" id="forward"></i>
+				</div>
+				<div id="settings">
+					<i class="fa fa-cog" aria-hidden="true"></i>
+					<i class="fa fa-share" aria-hidden="true"></i>
+					<i class="fa fa-volume-up" aria-hidden="true"></i>
+					<!-- <i class="fa fa-volume-down" aria-hidden="true"></i> -->
+				</div>
+			</div>
+			</div>
+		</div>
+		
+	</div>
+	<div id="right">
+		<center><h1>ALL VIDEO</h1></center>
+		<input type="search" id="searchbtn"><i class="fa fa-plus-circle" aria-hidden="true" id="plusIcon"></i>
+
+
+		<div id="all_videos">
+			<p id="video_name">video name</p>
+			<div id="buttons">
+				<button id="plays_btn">Play</button>
+				<button id="delete_btn">Delete</button>
+			</div>
+		</div>
+
+
+			<div id="all_videos">
+			<p id="video_name">video name</p>
+			<div id="buttons">
+				<button id="plays_btn">Play</button>
+				<button id="delete_btn">Delete</button>
+			</div>
+		</div>
+
+
+		<div id="all_videos">
+			<p id="video_name">video name</p>
+			<div id="buttons">
+				<button id="plays_btn">Play</button>
+				<button id="delete_btn">Delete</button>
+			</div>
+		</div>
+
+
+
+	</div>
+	</div>
+
+
+	<div  id="add_video">
+		
+		<center><div id="contact_bg" class="animate__animated animate__fadeIn">
+	<div id="add_contact_box">
+		<h1 id="edit_contact">Add Video</h1>
+		<form>
+			<input type="text" placeholder="Enter video name" id="c_name">
+			<input type="text" placeholder="Enter video Url" id="c_number">
+			<button type="button" id="add">Add</button>
+				<button type="button" id="close">Close</button>
+
+
+		</form>
+	</div>
+</div></center>
+
+	</div>
+	<script src="./js/video.js"></script>
+</body>
+</html>
